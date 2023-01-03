@@ -62,7 +62,7 @@ def encode_source_code(src: str) -> str:
     """
     # See https://github.com/compiler-explorer/compiler-explorer/blob/main/static/url.ts
 
-    encoded_src = quote_plus(src, safe="/ :(),*")
+    encoded_src = quote_plus(src, safe="/ :(),*@")
 
     # TODO: replacing %XX patterns globally is unsafe. It can break escaped % chars.
     #       Should be done using char by char analyzing instead
